@@ -17,9 +17,11 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='subl -n'
+export VISUAL=$EDITOR
+export GIT_EDITOR='subl -nw'
 export PAGER='less'
+export LESSEDIT='subl -nl'
 
 #
 # Language
