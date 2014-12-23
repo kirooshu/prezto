@@ -17,11 +17,11 @@ fi
 # Editors
 #
 
-export EDITOR='subl -n'
+export EDITOR='atom -n'
 export VISUAL=$EDITOR
-export GIT_EDITOR='subl -nw'
+export GIT_EDITOR='atom -nw'
 export PAGER='less'
-export LESSEDIT='subl -nl'
+export LESSEDIT='atom -nl'
 
 #
 # Language
