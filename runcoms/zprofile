@@ -35,6 +35,9 @@ fi
 # Paths
 #
 
+# Go
+export GOPATH=~/go
+
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
@@ -47,6 +50,8 @@ typeset -gU cdpath fpath mailpath path
 path=(
   /usr/local/{bin,sbin}
   ~/bin
+  $GOPATH/bin
+  /usr/local/opt/go/libexec/bin
   $path
 )
 
