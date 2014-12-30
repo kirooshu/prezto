@@ -12,7 +12,11 @@ fi
 
 # Customize to your needs...
 
-# fix for using a carrot in commands, e.g. "git reset HEAD^^"
-setopt localoptions nonomatch
+export PATH=$PATH:~/bin
+eval "$(fasd --init auto)"
+autoload -U compinit && compinit
 
-alias gits="git status -s"
+export GITHUB_HOST=github.ewr01.tumblr.net
+export GITHUB_URL=https://github.ewr01.tumblr.net/
+
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
