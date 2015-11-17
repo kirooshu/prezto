@@ -17,9 +17,11 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='mate'
+export VISUAL=$EDITOR
+export GIT_EDITOR='mate'
 export PAGER='less'
+export LESSEDIT='mate'
 
 #
 # Language
@@ -33,6 +35,9 @@ fi
 # Paths
 #
 
+# Go
+export GOPATH=~/go
+
 # Ensure path arrays do not contain duplicates.
 typeset -gU cdpath fpath mailpath path
 
@@ -44,6 +49,9 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  ~/bin
+  $GOPATH/bin
+  /usr/local/opt/go/libexec/bin
   $path
 )
 

@@ -11,3 +11,12 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+export PATH=$PATH:~/bin
+eval "$(fasd --init auto)"
+autoload -U compinit && compinit
+
+export GITHUB_HOST=github.ewr01.tumblr.net
+export GITHUB_URL=https://github.ewr01.tumblr.net/
+
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
