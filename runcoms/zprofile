@@ -17,11 +17,11 @@ fi
 # Editors
 #
 
-export EDITOR='mate'
+export EDITOR='mate -w'
 export VISUAL=$EDITOR
-export GIT_EDITOR='mate'
+export GIT_EDITOR='mate -w'
 export PAGER='less'
-export LESSEDIT='mate'
+export LESSEDIT='mate -w'
 
 #
 # Language
