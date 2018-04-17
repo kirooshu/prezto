@@ -24,3 +24,5 @@ export GITHUB_HOST=github.tumblr.net
 export GITHUB_URL=https://github.tumblr.net/
 
 for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
+
+export SSH_AUTH_SOCK=$HOME/.yubiagent/sock
