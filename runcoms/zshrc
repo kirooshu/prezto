@@ -16,13 +16,17 @@ for config_file ($HOME/.yadr/zsh/*.zsh); do
   source $config_file;
 done
 
-export PATH=/usr/local/php5/bin:~/bin:/opt/boxen/homebrew/bin:$PATH
 eval "$(fasd --init auto)"
-autoload -U compinit && compinit
+
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
 
 export GITHUB_HOST=github.tumblr.net
 export GITHUB_URL=https://github.tumblr.net/
 
-for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
-export SSH_AUTH_SOCK=$HOME/.yubiagent/sock
