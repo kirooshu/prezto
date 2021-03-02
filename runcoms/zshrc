@@ -16,6 +16,7 @@ for config_file ($HOME/.yadr/zsh/*.zsh); do
   source $config_file;
 done
 
+eval "$(rbenv init -)"
 eval "$(fasd --init auto)"
 
 autoload -Uz compinit
@@ -29,4 +30,11 @@ export GITHUB_URL=https://github.tumblr.net/
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="${PATH}:${HOME}/.krew/bin"
+
+for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
+export PATH="/Users/kiril/Workspace/github/git-fuzzy/bin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
